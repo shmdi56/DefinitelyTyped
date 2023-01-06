@@ -30,6 +30,7 @@ export interface State<Datum> {
     setActiveNodeCentered: boolean;
     expandLevel: number;
     compact: boolean;
+    isLinksCurved: boolean;
     rootMargin: number;
     nodeDefaultBackground: string;
     connections: Connection[];
@@ -124,6 +125,8 @@ export class OrgChart<Datum> {
     expandLevel(value: number): this;
     compact(): boolean;
     compact(value: boolean): this;
+    isLinksCurved(): boolean;
+    isLinksCurved(value: boolean): this;
     rootMargin(): number;
     rootMargin(value: number): this;
     nodeDefaultBackground(): string; // CSS color, for example "#2C3E50"
